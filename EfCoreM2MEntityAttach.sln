@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreM2MEntityAttach", "EfCoreM2MEntityAttach\EfCoreM2MEntityAttach.csproj", "{BD71E11E-206D-42C5-A0F3-315E9B11FED3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD71E11E-206D-42C5-A0F3-315E9B11FED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD71E11E-206D-42C5-A0F3-315E9B11FED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD71E11E-206D-42C5-A0F3-315E9B11FED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD71E11E-206D-42C5-A0F3-315E9B11FED3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46B40930-0F79-4266-ADBD-82BF4CF4AE30}
+	EndGlobalSection
+EndGlobal
