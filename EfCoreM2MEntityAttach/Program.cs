@@ -27,8 +27,22 @@ context.SaveChanges();
 //change
 var employee = context.Employees.First();
 var territory = employee.Territories.First();
-context.Entry(territory).State = EntityState.Detached;
-//how can I re-attach territory here and keep the EmployeeTerritory State as Unchanged?
-context.Entry(territory).State = EntityState.Modified;
+context.Entry(employee).State = EntityState.Detached;
+//var employeeNode = context.Entry(employee);
+//var territoryNode = context.Entry(territory);
 
-context.SaveChanges(); //fails due to duplicate key.
+context.Entry(employee).State = EntityState.Detached;
+context.Entry(territory).State = EntityState.Detached;
+
+//how to re-attach territory here and keep the EmployeeTerritory State as Unchanged:
+//context.Entry(territory).State = EntityState.Unchanged;
+//context.Entry(territory).State = EntityState.Modified;
+
+//how to re-attach territory here and set EmployeeTerritory State as Deleted:
+context.Entry(territory).State = EntityState.Unchanged;
+context.Entry(employee).State = EntityState.Unchanged; 
+context.Entry(territory).Collection("Employees").Metadata.GetCollectionAccessor()?.Remove(territory, employee);
+context.Entry(employee).Collection("Territories").Metadata.GetCollectionAccessor()?.Remove(employee, territory);
+
+var debugView = context.ChangeTracker.DebugView.LongView;
+context.SaveChanges(); 
